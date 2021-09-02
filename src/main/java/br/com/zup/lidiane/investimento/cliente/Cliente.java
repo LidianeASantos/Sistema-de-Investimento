@@ -1,4 +1,4 @@
-package br.com.zup.lidiane.investimento;
+package br.com.zup.lidiane.investimento.cliente;
 
 import javax.persistence.*;
 
