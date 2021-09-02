@@ -6,15 +6,15 @@ import javax.validation.constraints.NotBlank;
 public class ClienteDto {
 
     private Long id;
-    @NotBlank
+    @NotBlank(message = "{validacao.nome.cliente}")
     private String nome;
-    @Email
+    @Email(message = "{validacao.email.cliente}")
     private String email;
-    @NotBlank
+    @NotBlank(message = "{validacao.telefone.cliente}")
     private String telefone;
-    @NotBlank
+    @NotBlank(message = "{validacao.valorAplicado.cliente}")
     private double valorAplicado;
-    @NotBlank
+    @NotBlank(message = "{validacao.mesesAplicado.cliente}")
     private String mesesAplicado;
 
     public ClienteDto() {
