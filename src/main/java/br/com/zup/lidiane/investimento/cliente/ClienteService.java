@@ -8,4 +8,8 @@ public class ClienteService {
 
     @Autowired
     private ClienteRepository clienteRepository;
+
+    public void salvarSimulacaoCliente(Cliente cliente){
+        clienteRepository.save( cliente );
+    }
 }
