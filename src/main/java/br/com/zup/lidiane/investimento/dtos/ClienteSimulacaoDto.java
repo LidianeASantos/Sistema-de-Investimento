@@ -6,7 +6,7 @@ import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
-public class SimulacaoDto {
+public class ClienteSimulacaoDto {
 
     private Long id;
     @NotBlank(message = "{validacao.nome.cliente}")
@@ -17,9 +17,9 @@ public class SimulacaoDto {
     @OneToMany
     private SimulacaoAplicacaoDto valorAplicado;
     @NotBlank(message = "{validacao.mesesAplicado.cliente}")
-    private String mesesAplicado;
+    private int mesesAplicado;
 
-    public SimulacaoDto() {
+    public ClienteSimulacaoDto() {
     }
 
     public Long getId() {
@@ -46,7 +46,7 @@ public class SimulacaoDto {
         this.email = email;
     }
 
-    public SimulacaoAplicacaoDto getValorAplicado() {
+    public ClienteSimulacaoDto getValorAplicado() {
         return valorAplicado;
     }
 
@@ -54,11 +54,11 @@ public class SimulacaoDto {
         this.valorAplicado = valorAplicado;
     }
 
-    public String getMesesAplicado() {
+    public int getMesesAplicado() {
         return mesesAplicado;
     }
 
-    public void setMesesAplicado(String mesesAplicado) {
+    public void setMesesAplicado(int mesesAplicado) {
         this.mesesAplicado = mesesAplicado;
     }
 }
