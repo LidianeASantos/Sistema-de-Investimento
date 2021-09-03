@@ -55,7 +55,7 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public SimulacaoAplicacao getValorAplicado() {
+    public Cliente getValorAplicado() {
         return valorAplicado;
     }
 
@@ -63,7 +63,7 @@ public class Cliente {
         this.valorAplicado = valorAplicado;
     }
 
-    public String getMesesAplicado() {
+    public int getMesesAplicado() {
         return mesesAplicado;
     }
 
