@@ -1,14 +1,17 @@
-package br.com.zup.lidiane.investimento.dtos;
+package br.com.zup.lidiane.investimento.simulacao;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
 import java.time.LocalDate;
-
-public class SimulacaoAplicacaoDto {
+@Entity
+@Table(name = "simulacao")
+public class SimulacaoAplicacao {
 
     private double valorAplicado;
     private double rendimento;
     private LocalDate dataDeResgate;
 
-    public SimulacaoAplicacaoDto() {
+    public SimulacaoAplicacao() {
     }
 
     public double getValorAplicado() {
