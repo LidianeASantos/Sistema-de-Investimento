@@ -16,4 +16,5 @@ public class SimulacaoAplicacaoService {
     public LocalDate calcularDataResgate(int qtdMeses){
         return LocalDate.now().plusMonths( qtdMeses );
     }
+
 }

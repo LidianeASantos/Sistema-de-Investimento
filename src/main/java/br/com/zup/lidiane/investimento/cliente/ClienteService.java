@@ -9,8 +9,12 @@ public class ClienteService {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    public void salvarSimulacaoCliente(Cliente cliente){
+    public Cliente salvarSimulacaoCliente(Cliente cliente){
+
         clienteRepository.save( cliente );
+        return cliente;
     }
+
+
 
 }
