@@ -12,4 +12,5 @@ public class ClienteService {
     public void salvarSimulacaoCliente(Cliente cliente){
         clienteRepository.save( cliente );
     }
+
 }
