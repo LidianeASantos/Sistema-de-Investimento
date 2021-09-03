@@ -19,7 +19,7 @@ public class SimulacaoAplicacaoDto {
         return valorAplicado;
     }
 
-    public void setValorAplicado(ClienteSimulacaoDto valorAplicado) {
+    public void setValorAplicado(SimulacaoAplicacao valorAplicado) {
         this.valorAplicado = valorAplicado;
     }
 
