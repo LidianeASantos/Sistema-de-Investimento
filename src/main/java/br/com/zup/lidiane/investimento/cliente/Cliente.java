@@ -1,5 +1,7 @@
 package br.com.zup.lidiane.investimento.cliente;
 
+import br.com.zup.lidiane.investimento.simulacao.SimulacaoAplicacao;
+
 import javax.persistence.*;
 
 @Entity
@@ -14,10 +16,18 @@ public class Cliente {
     private String email;
     @Column
     private String telefone;
-    private double valorAplicado;
+    private SimulacaoAplicacao valorAplicado;
     private String mesesAplicado;
 
     public Cliente() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -44,11 +54,11 @@ public class Cliente {
         this.telefone = telefone;
     }
 
-    public double getValorAplicado() {
+    public SimulacaoAplicacao getValorAplicado() {
         return valorAplicado;
     }
 
-    public void setValorAplicado(double valorAplicado) {
+    public void setValorAplicado(SimulacaoAplicacao valorAplicado) {
         this.valorAplicado = valorAplicado;
     }
 

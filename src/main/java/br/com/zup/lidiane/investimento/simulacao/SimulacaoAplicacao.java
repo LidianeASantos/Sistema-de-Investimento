@@ -1,5 +1,7 @@
 package br.com.zup.lidiane.investimento.simulacao;
 
+import br.com.zup.lidiane.investimento.cliente.Cliente;
+
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.time.LocalDate;
@@ -7,18 +9,18 @@ import java.time.LocalDate;
 @Table(name = "simulacao")
 public class SimulacaoAplicacao {
 
-    private double valorAplicado;
+    private Cliente valorAplicado;
     private double rendimento;
     private LocalDate dataDeResgate;
 
     public SimulacaoAplicacao() {
     }
 
-    public double getValorAplicado() {
+    public Cliente getValorAplicado() {
         return valorAplicado;
     }
 
-    public void setValorAplicado(double valorAplicado) {
+    public void setValorAplicado(Cliente valorAplicado) {
         this.valorAplicado = valorAplicado;
     }
 
