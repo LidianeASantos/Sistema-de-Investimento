@@ -1,21 +1,25 @@
 package br.com.zup.lidiane.investimento.simulacao;
 
+import br.com.zup.lidiane.investimento.dtos.SimulacaoDto;
+
+import javax.persistence.ManyToOne;
 import java.time.LocalDate;
 
 public class SimulacaoAplicacaoDto {
 
-    private double valorAplicado;
+    @ManyToOne
+    private SimulacaoDto valorAplicado;
     private double rendimento;
     private LocalDate dataDeResgate;
 
     public SimulacaoAplicacaoDto() {
     }
 
-    public double getValorAplicado() {
+    public SimulacaoDto getValorAplicado() {
         return valorAplicado;
     }
 
-    public void setValorAplicado(double valorAplicado) {
+    public void setValorAplicado(SimulacaoDto valorAplicado) {
         this.valorAplicado = valorAplicado;
     }
 

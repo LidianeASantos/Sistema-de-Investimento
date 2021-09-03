@@ -3,12 +3,14 @@ package br.com.zup.lidiane.investimento.simulacao;
 import br.com.zup.lidiane.investimento.cliente.Cliente;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import java.time.LocalDate;
 @Entity
 @Table(name = "simulacao")
 public class SimulacaoAplicacao {
 
+    @ManyToOne
     private Cliente valorAplicado;
     private double rendimento;
     private LocalDate dataDeResgate;

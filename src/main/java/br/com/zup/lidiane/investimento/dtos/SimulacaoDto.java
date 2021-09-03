@@ -1,5 +1,8 @@
 package br.com.zup.lidiane.investimento.dtos;
 
+import br.com.zup.lidiane.investimento.simulacao.SimulacaoAplicacaoDto;
+
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 
@@ -11,7 +14,8 @@ public class SimulacaoDto {
     @Email(message = "{validacao.email.cliente}")
     private String email;
     @NotBlank(message = "{validacao.valorAplicado.cliente}")
-    private double valorAplicado;
+    @OneToMany
+    private SimulacaoAplicacaoDto valorAplicado;
     @NotBlank(message = "{validacao.mesesAplicado.cliente}")
     private String mesesAplicado;
 
@@ -42,11 +46,11 @@ public class SimulacaoDto {
         this.email = email;
     }
 
-    public double getValorAplicado() {
+    public SimulacaoAplicacaoDto getValorAplicado() {
         return valorAplicado;
     }
 
-    public void setValorAplicado(double valorAplicado) {
+    public void setValorAplicado(SimulacaoAplicacaoDto valorAplicado) {
         this.valorAplicado = valorAplicado;
     }
 

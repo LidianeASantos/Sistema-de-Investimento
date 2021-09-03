@@ -16,6 +16,7 @@ public class Cliente {
     private String email;
     @Column
     private String telefone;
+    @OneToMany
     private SimulacaoAplicacao valorAplicado;
     private String mesesAplicado;
 
